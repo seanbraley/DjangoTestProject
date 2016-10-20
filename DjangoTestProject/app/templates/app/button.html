@@ -1,0 +1,13 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<p>This is the important button. It has been pressed {{ count }} times</p>
+<form action="" method="post">{% csrf_token %}
+    <input hidden value="1" name="id" id="id"/>
+    <button class="btn btn-large btn-danger">Click me</button>
+</form>
+{% endblock %}
